@@ -1,4 +1,4 @@
-require('dotenv').config({path: '../.env'});
+require('dotenv').config({ path: '../.env' });
 const bcrypt = require("bcrypt");
 const { ObjectId } = require('mongodb');
 const { client, dbName } = require('../config/mongo');
@@ -13,7 +13,7 @@ const data0 = {
     username: "competitor0",
     password: bcrypt.hashSync("password", 5),
     profile: PROFILE.COMPETITOR,
-    skill: ["history","research"]
+    skill: ["history", "research"]
 }
 const data1 = {
     _id: ObjectId("62e1f07aa75e2ae22e49a916"),
@@ -63,9 +63,9 @@ const data5 = {
 user.insertMany([
     data0, data1, data2, data3, data4, data5
 ])
-.then(() => {
-    console.log("success seed dummy users")
-})
-.finally(() => {
-    process.exit(0)
-})
+    .then(() => {
+        console.log("success seed dummy users")
+    })
+    .finally(() => {
+        process.exit(0)
+    })

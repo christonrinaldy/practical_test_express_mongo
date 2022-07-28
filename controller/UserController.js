@@ -21,7 +21,6 @@ class UserController {
 
             }
         } catch (err) {
-            console.log("err", err)
             res.status(422).send({ message: "Data cannot be processed" })
         }
 

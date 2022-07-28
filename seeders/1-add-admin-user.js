@@ -1,4 +1,4 @@
-require('dotenv').config({path: '../.env'});
+require('dotenv').config({ path: '../.env' });
 const bcrypt = require("bcrypt");
 const { client, dbName } = require('../config/mongo');
 const { PROFILE } = require('../enum');
@@ -19,7 +19,7 @@ user.findOne({ username: data.username })
             const stat = await user.insertOne(data);
         } else {
         }
-    }) 
+    })
     .catch(err => {
         console.log(err)
     })

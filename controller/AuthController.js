@@ -17,7 +17,6 @@ class AuthController {
                     const token = jwt.sign(foundUser, process.env.SECRET)
                     res.status(200).send({ token, profile: foundUser.profile })
                 } else {
-                    console.log(valid)
                     res.status(401).send({ message: "invalid login" })
                 }
             }
