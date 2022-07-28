@@ -21,7 +21,7 @@ class AuthController {
                 }
             }
         } catch (err) {
-
+            res.status(401).send({ message: "invalid login" })
         }
     }
     static async logout(req, res) {
